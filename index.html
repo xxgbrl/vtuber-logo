@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitubir Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vitubir Generator</h1>
+        
+        <div class="input-group">
+            <label for="logoText">Input logo name:</label>
+            <input type="text" id="logoText" placeholder="Input name here...">
+        </div>
+        
+        <div id="logoPreview">
+            <canvas id="logoCanvas" width="1000" height="600"></canvas>
+        </div>
+
+        <div class="input-group">
+            <label for="fontSize">Font Size: <span id="fontSizeValue">48</span></label>
+            <input type="range" id="fontSize" min="20" max="200" value="48">
+            
+        </div>
+
+        <div class="input-group">
+            <label for="bgColor">Background Color:</label>
+            <input type="color" id="bgColor" value="#ff99ff">
+            <input type="text" id="bgColorHex" value="#ff99ff">
+        </div>
+
+        <div class="input-group">
+            <label for="letterSpacing">Letter Spacing: <span id="letterSpacingValue">10</span>
+        </div></label>
+            <input type="range" id="letterSpacing" min="0" max="50" value="10">
+
+        <div class="input-group">
+            <label for="shadowX">Shadow X: <span id="shadowXValue">15</span></label>
+            <input type="range" id="shadowX" min="-50" max="50" value="15">
+        </div>
+
+        <div class="input-group">
+            <label for="shadowY">Shadow Y: <span id="shadowYValue">16</span></label>
+            <input type="range" id="shadowY" min="-50" max="50" value="16">
+        </div>
+
+        <div class="input-group">
+            <label for="strokeOuter">Stroke Outer: <span id="strokeOuterValue">18</span></label>
+            <input type="range" id="strokeOuter" min="1" max="70" value="18">
+        </div>
+
+        <div class="input-group">
+            <label for="strokeInner">Stroke Inner: <span id="strokeInnerValue">4</span></label>
+            <input type="range" id="strokeInner" min="1" max="50" value="4">
+        </div>
+
+        <div id="letterColors"></div>
+
+        <div class="controls">
+            <button onclick="generateInitialLogo()">Generate Logo</button>
+            <button onclick="downloadLogo()">Download Logo</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
